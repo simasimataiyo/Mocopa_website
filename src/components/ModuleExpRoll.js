@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class BlogRollTemplate extends React.Component {
+class ModuleExpTemplate extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -12,9 +12,9 @@ class BlogRollTemplate extends React.Component {
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="is-parent column is-4" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
+                className={`module-exp-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
@@ -27,33 +27,29 @@ class BlogRollTemplate extends React.Component {
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
                           width:
                             post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.width,
+                            .gatsbyImageData.width,
                           height:
                             post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.height,
+                            .gatsbyImageData.height,
                         }}
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
+                  <div className="post-meta">
                     <Link
                       className="title has-text-dark is-size-4"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span></span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
+                  </div>
                 </header>
                 <p>
-                  {post.excerpt}
+                  {post.frontmatter.description}
                   <br />
                   <br />
                   <Link className="button" to={post.fields.slug}>
-                    つづきを読む →
+                    詳しく見る
                   </Link>
                 </p>
               </article>
@@ -64,7 +60,7 @@ class BlogRollTemplate extends React.Component {
   }
 }
 
-BlogRoll.propTypes = {
+ModuleExpRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -73,15 +69,14 @@ BlogRoll.propTypes = {
 }
 
 
-export default function BlogRoll() {
+export default function ModuleExpRoll() {
   return (
     <StaticQuery
       query={graphql`
-        query BlogRollQuery {
+        query ModuleExpRollQuery {
           allMarkdownRemark(
-            limit: 4,
-            sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+            limit:3,
+            filter: { frontmatter: { templateKey: { eq: "module-exp-page" } } }
           ) {
             edges {
               node {
@@ -93,14 +88,14 @@ export default function BlogRoll() {
                 frontmatter {
                   title
                   templateKey
-                  date(formatString: "MMMM DD, YYYY")
+                  description
                   featuredpost
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(
-                        width: 120
+                        width: 512
                         quality: 100
-                        layout: CONSTRAINED
+                        layout: FULL_WIDTH
                       )
 
                     }
@@ -111,7 +106,7 @@ export default function BlogRoll() {
           }
         }
       `}
-      render={(data, count) => <BlogRollTemplate data={data} count={count} />}
+      render={(data, count) => <ModuleExpTemplate data={data} count={count} />}
     />
   );
 }

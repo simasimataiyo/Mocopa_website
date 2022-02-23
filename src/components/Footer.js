@@ -1,13 +1,13 @@
 import * as React from "react";
 import { Link } from "gatsby";
 
-import logo from "../img/mocopa_logo.svg";
+import logo from "../img/mocopa_logo_white.svg";
 import twitter from "../img/social/twitter.svg";
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-light has-text-black-ter">
+      <footer className="footer has-background-black has-text-white-ter">
         <div className="content has-text-centered">
           <img
             src={logo}
@@ -15,8 +15,8 @@ const Footer = class extends React.Component {
             style={{ width: "25em", height: "10em" }}
           />
         </div>
-        <div className="content has-text-centered has-background-light has-text-white-ter">
-          <div className="container has-background-light has-text-black-ter">
+        <div className="content has-text-centered has-background-black has-text-white-ter">
+          <div className="container has-background-black has-text-white-ter">
             <div style={{ maxWidth: "100vw" }} className="columns">
               <div className="column is-4">
                 <section className="menu">
@@ -37,7 +37,12 @@ const Footer = class extends React.Component {
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products">
+                      <Link className="navbar-item" to="/app">
+                        App
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="navbar-item" to="/modules">
                         Modules
                       </Link>
                     </li>
@@ -53,7 +58,9 @@ const Footer = class extends React.Component {
                       </Link>
                     </li>
                     <li>
-                      <a href="https://forms.gle/iUWQAYkSMFASBKnEA">Contact</a>
+                      <Link className="navbar-item" to="https://forms.gle/iUWQAYkSMFASBKnEA">
+                        Contact
+                      </Link>
                     </li>
                   </ul>
                 </section>

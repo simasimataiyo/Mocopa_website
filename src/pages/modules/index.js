@@ -1,9 +1,9 @@
 import * as React from "react";
 
 import Layout from "../../components/Layout";
-import BlogRoll from "../../components/BlogRoll";
+import ModuleExpRollAll from "../../components/ModuleExpRollAll";
 
-export default class BlogIndexPage extends React.Component {
+export default class ModuleIndexPage extends React.Component {
   render() {
     return (
       <Layout>
@@ -22,13 +22,20 @@ export default class BlogIndexPage extends React.Component {
               padding: "1rem",
             }}
           >
-            Blog
+            Modules
           </h1>
         </div>
         <section className="section">
           <div className="container">
             <div className="content">
-              <BlogRoll />
+              <div className="columns">
+                <div className="column is-12">
+                  <h3 className="has-text-weight-semibold is-size-3">
+                    モジュール一覧
+                  </h3>
+                </div>
+              </div>
+              <ModuleExpRollAll />
             </div>
           </div>
         </section>

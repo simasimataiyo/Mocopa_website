@@ -6,6 +6,7 @@ import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
+import ModuleExpRoll from "../components/ModuleExpRoll";
 import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
@@ -39,8 +40,19 @@ export const IndexPageTemplate = ({
                   <Features gridItems={intro.blurbs} />
                   <div className="columns">
                     <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
+                      <Link className="btn" to="/tutorial">
+                        Mocopaを使ってみる
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="column is-12">
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      モジュール
+                    </h3>
+                    <ModuleExpRoll />
+                    <div className="column is-12 has-text-centered">
+                      <Link className="btn" to="/modules">
+                        モジュール一覧を見る
                       </Link>
                     </div>
                   </div>
@@ -51,7 +63,7 @@ export const IndexPageTemplate = ({
                     <BlogRoll />
                     <div className="column is-12 has-text-centered">
                       <Link className="btn" to="/blog">
-                        Read more
+                        もっと記事を見る
                       </Link>
                     </div>
                   </div>

@@ -5,36 +5,24 @@ image: /img/top_heroimage.jpg
 heading: 自分で作ってカスタマイズする入力デバイス
 subheading: Support sustainable farming while enjoying a cup
 description: >-
-  Mocopaはモジュールをつなぎ合わせ、Android端末のディスプレイに載せて使う入力デバイスです。多種多様なモジュールを目的にあわせ組み替えることで、自分だけのコントロールパネルが作れます。
+  Mocopaはモジュールをつなぎ合わせ、Android端末のディスプレイに載せて使うBlender向け入力デバイスです。多種多様なモジュールを目的にあわせ組み替えることで、自分だけのコントロールパネルが作れます。
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/lp-devices-001.png
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+        タブレットでもスマートフォンでも、お手元にAndroid端末があればすぐに使い始められます。MocopaアプリはAndroid5.1.1以上に対応しています。複数台を同時に使うことも可能です。
     - image: /img/coffee-gear.png
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
+        様々なモジュールを組み合わせることで、制作目的やシチュエーション、身体性にあわせてカスタマイズすることができます。
     - image: /img/tutorials.png
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
+        Mocopaモジュールは指とタッチスクリーンの間に、導電性部品で作られた機構を組み込むことでモジュールへの操作をタップ・フリック・ドラッグ操作に変換します。
+        各モジュールは3Dプリントされた部品と身近な材料から組み立て可能です。
     - image: /img/meeting-space.png
       text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+        MocopaはOSC(Open Sound Control)通信を使ってコンピュータと通信します。
+        Blender用アドオンI/F JoinerでBlenderにOSC通信機能とオペレータ割り当て機能を追加することで、Mocopaを使ってBlenderを操作することが可能になります。
+        またOSC通信に対応した他のソフトウェアでも使えるはずです。（多分）
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their

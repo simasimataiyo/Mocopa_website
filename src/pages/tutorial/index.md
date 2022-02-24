@@ -1,10 +1,28 @@
 ---
 templateKey: 'about-page'
 path: /getting_started
-title: Getting Started
+title: Mocopaを始める
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+
+ここではMocopaを使ってBlenderを操作できるようにするまでの一連の流れをご紹介します。
+
+### Mocopaアプリをインストールする
+- Android端末で[Releases Page](https://github.com/simasimataiyo/Mocopa/releases)にアクセスし、Assetsに含まれている.apkファイルをダウンロードしてください。
+
+- 「ファイル」アプリでダウンロードしたMocopa.apkをタップするとインストールが始まります。
+提供元不明のアプリのインストールとなります。使用は自己責任でお願いします。
+
+### BlenderにI/F Joinerアドオンをインストールする。
+- Releases Pageからzipファイルをダウンロードします。
+- Blenderを起動しトップバーから「Edit」→「Preference」を開きます
+- Preferenceウィンドウ左側メニューから「Addon」→ウィンドウ右上「Install」ボタンをクリックしダウンロードしたzipファイルをインストールします。
+- 「Community」が選択された状態でInterface: I/F Joinerがアドオンリストに追加されていること確認したら，チェックを入れて有効化します。
+
+アドオンのインストールが完了したら、一度Blenderを再起動してください。
+
+### Mocopaアプリを設定する
+> Mocopa使用時は、Android端末がBlenderを起動しているPCと同じLANに接続している必要があります。必ずWi-Fiの接続と接続先を確認してください。
+
 
 ### Single origin
 Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.

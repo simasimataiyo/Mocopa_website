@@ -12,9 +12,7 @@ import FullWidthImage from "../components/FullWidthImage";
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
-  title,
   heading,
-  subheading,
   description,
   intro,
 }) => {
@@ -38,6 +36,13 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <Features gridItems={intro.blurbs} />
+                  <div className="columns is-centered">
+                    <div className="youtube-wrapper">
+                      <div className="youtube column is-12 has-text-centered">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/04FrKWPnpaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
                   <div className="columns">
                     <div className="column is-12 has-text-centered">
                       <Link className="btn" to="/tutorial">
@@ -81,7 +86,6 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  subheading: PropTypes.string,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
@@ -97,7 +101,6 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
@@ -126,7 +129,6 @@ export const pageQuery = graphql`
           }
         }
         heading
-        subheading
         description
         intro {
           blurbs {

@@ -11,7 +11,7 @@ intro:
     - image: /img/lp-devices-001.png
       text: >
         タブレットでもスマートフォンでも、お手元にAndroid端末があればすぐに使い始められます。MocopaアプリはAndroid5.1.1以上に対応しています。複数台を同時に使うことも可能です。
-    - image: /img/coffee-gear.png
+    - image: /img/lp-devices-002.png
       text: >
         様々なモジュールを組み合わせることで、制作目的やシチュエーション、身体性にあわせてカスタマイズすることができます。
     - image: /img/tutorials.png

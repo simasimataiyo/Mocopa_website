@@ -36,13 +36,20 @@ module.exports = {
         name: "images",
       },
     },
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
-    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          {
+            resolve: "gatsby-remark-embed-youtube",
+            options: {
+              width: 800,
+              height: 400,
+            },
+          },
           {
             resolve: "gatsby-remark-relative-images",
             options: {
@@ -56,6 +63,8 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 2048,
+              quality: 80,
+              
             },
           },
           {

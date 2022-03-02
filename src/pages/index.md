@@ -14,11 +14,11 @@ intro:
     - image: /img/lp-devices-002.png
       text: >
         様々なモジュールを組み合わせることで、制作目的やシチュエーション、身体性にあわせてカスタマイズすることができます。
-    - image: /img/tutorials.png
+    - image: /img/lp-devices-003.png
       text: >
         Mocopaモジュールは指とタッチスクリーンの間に、導電性部品で作られた機構を組み込むことでモジュールへの操作をタップ・フリック・ドラッグ操作に変換します。
         各モジュールは3Dプリントされた部品と身近な材料から組み立て可能です。
-    - image: /img/meeting-space.png
+    - image: /img/lp-devices-004.png
       text: >
         MocopaはOSC(Open Sound Control)通信を使ってコンピュータと通信します。
         Blender用アドオンI/F JoinerでBlenderにOSC通信機能とオペレータ割り当て機能を追加することで、Mocopaを使ってBlenderを操作することが可能になります。

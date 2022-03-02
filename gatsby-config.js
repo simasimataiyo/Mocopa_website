@@ -36,24 +36,7 @@ module.exports = {
         name: "images",
       },
     },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          formats: [`auto`, `webp`],
-          placeholder: `dominantColor`,
-          quality: 80,
-          breakpoints: [750, 1080, 1366, 1920],
-          backgroundColor: `transparent`,
-          tracedSVGOptions: {},
-          blurredOptions: {},
-          jpgOptions: {},
-          pngOptions: {},
-          webpOptions: {},
-          avifOptions: {},
-        }
-      }
-    },
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
     "gatsby-transformer-sharp",
     {
@@ -80,6 +63,8 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 2048,
+              quality: 80,
+              
             },
           },
           {
